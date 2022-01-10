@@ -7573,11 +7573,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\SignalRMessenger\\SignalRMessenger\\SignalRMessenger.csproj",
+      "projectUniqueName": "C:\\Users\\ACER\\source\\PrivateMessenger_Eldaniz\\SignalRMessenger\\SignalRMessenger\\SignalRMessenger.csproj",
       "projectName": "SignalRMessenger",
-      "projectPath": "C:\\Users\\ACER\\source\\repos\\SignalRMessenger\\SignalRMessenger\\SignalRMessenger.csproj",
+      "projectPath": "C:\\Users\\ACER\\source\\PrivateMessenger_Eldaniz\\SignalRMessenger\\SignalRMessenger\\SignalRMessenger.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER\\source\\repos\\SignalRMessenger\\SignalRMessenger\\obj\\",
+      "outputPath": "C:\\Users\\ACER\\source\\PrivateMessenger_Eldaniz\\SignalRMessenger\\SignalRMessenger\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

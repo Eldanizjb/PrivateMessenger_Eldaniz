@@ -37,17 +37,20 @@ connection.start().then(function () {
 document.getElementById("messengerButton").addEventListener("click", function (event) {
     var message = document.getElementById("messengerInput").value;
     var recieverId = document.getElementById("recieverId").value;
-    connection.invoke("SendPrivateMessage", recieverId, message).catch(function (err) {
-        return console.error(err.toString());
-    });
-    event.preventDefault();
+    if (message1=null) {
+        connection.invoke("SendPrivateMessage", recieverId, message).catch(function (err) {
+            return console.error(err.toString());
+        });
+        event.preventDefault();
 
-    var p = document.createElement("p");
-    p.textContent = `${message}`;
-    p.classList.add("sender");
-    document.getElementsByClassName("messageContainer")[0].appendChild(p);
+        var p = document.createElement("p");
+        p.textContent = `${message}`;
+        p.classList.add("sender");
+        document.getElementsByClassName("messageContainer")[0].appendChild(p);
 
-    document.getElementById("messengerInput").value = "";
+        document.getElementById("messengerInput").value = "";
+    }
+
 });
 
 connection.on("ReceiveMessage", function (senderName, message) {

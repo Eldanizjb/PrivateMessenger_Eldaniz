@@ -144,6 +144,16 @@ namespace SignalRMessenger.Hubs
             await Clients.User(recieverId).SendAsync("HideTyping");
         }
 
+        public override async Task OnDisconnectedAsync(Exception exception)
+        {
+            var Rid = _httpContext.HttpContext.Session.GetString("Rid");
+            if (Rid!=null)
+            {
+                await Clients.User(Rid).SendAsync("HideTyping");
+            }
+           
+        }
+
         //public override Task OnConnectedAsync()
         //{
         //    return base.OnConnectedAsync();
@@ -161,18 +171,18 @@ namespace SignalRMessenger.Hubs
         //        CurrentMessage.RemoveAt(0);
         //}
 
-//        public async Task AddToGroup(string groupName)
-//{
-//    await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
+        //        public async Task AddToGroup(string groupName)
+        //{
+        //    await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
 
-//    await Clients.Group(groupName).SendAsync("Send", $"{Context.ConnectionId} has joined the group {groupName}.");
-//}
+        //    await Clients.Group(groupName).SendAsync("Send", $"{Context.ConnectionId} has joined the group {groupName}.");
+        //}
 
-//public async Task RemoveFromGroup(string groupName)
-//{
-//    await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
+        //public async Task RemoveFromGroup(string groupName)
+        //{
+        //    await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
 
-//    await Clients.Group(groupName).SendAsync("Send", $"{Context.ConnectionId} has left the group {groupName}.");
-//}
+        //    await Clients.Group(groupName).SendAsync("Send", $"{Context.ConnectionId} has left the group {groupName}.");
+        //}
     }
 }

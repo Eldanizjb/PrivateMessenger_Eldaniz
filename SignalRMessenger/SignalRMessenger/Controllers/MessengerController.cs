@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SignalRMessenger.Data;
 using SignalRMessenger.ViewModels;
@@ -14,12 +15,14 @@ namespace SignalRMessenger.Controllers
         private readonly AppDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly IHttpContextAccessor _httpcontextAccessor;
 
-        public MessengerController(AppDbContext context, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public MessengerController(AppDbContext context, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, IHttpContextAccessor httpcontextAccessor)
         {
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
+            _httpcontextAccessor = httpcontextAccessor;
         }
         public IActionResult Index()
         {
@@ -35,6 +38,7 @@ namespace SignalRMessenger.Controllers
             model.Messages = _context.Messages.Where(m => (m.SenderId == senderId && m.RecieverId == recieverId) || (m.SenderId == recieverId && m.RecieverId == senderId)).ToList();
             model.SenderId = senderId;
 
+            _httpcontextAccessor.HttpContext.Session.SetString("Rid", model.User.Id);
             return View(model);
         }
     }
