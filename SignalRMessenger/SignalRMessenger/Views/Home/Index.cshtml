@@ -1,0 +1,15 @@
+﻿@inject IHttpContextAccessor _httpcontext
+@inject UserManager<IdentityUser> _usermanager
+@inject SignInManager<IdentityUser> _signinmanager
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center-home-page">
+    <h1 class="display-4">
+        Hello <a class="text-primary">@_usermanager.GetUserName(User)</a>
+    </h1>
+    <h1 class="display-4">Welcome</h1>
+    <h2>to the world of dating.</h2>
+</div>
+

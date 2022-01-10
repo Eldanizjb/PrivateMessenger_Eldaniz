@@ -1,0 +1,105 @@
+﻿@inject IHttpContextAccessor _httpContext
+@inject UserManager<IdentityUser> _userManager
+@inject SignInManager<IdentityUser> _signInManager
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SignalRMessenger</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/jquery.ui.chatbox.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/js/jquery/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <link href="~/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="height:65px;">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="margin:0px; padding:0px"><img src="~/images/download.jpg" alt="Chat" style="width: 129px; height: 57px; "/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between col-lg-7">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark"  style="font-size:18px; padding-top:20px;" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            @*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Messenger">Messenger</a>*@
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end col-lg-3">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
+                        @if (_signInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" style=" color: rgba(0,0,0,.5); width: 170px; background: #f67fff; border-radius: 9px; height: 48px; margin: 5px; font-size: 18px; text-align: center; }">@_userManager.GetUserName(User)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" style="font-size:18px; padding-top:20px;" href="#">/</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark"  style=" color: rgba(0,0,0,.5); width: 79px; background: #dec30f; border-radius: 9px; height: 48px; margin: 5px; font-size: 18px; text-align: center; }" asp-area="" asp-controller="account" asp-action="Logout">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" style="font-size:18px; padding-top:20px;" href="#">/</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" style=" color: rgba(0,0,0,.5); width: 79px; background: aquamarine; border-radius: 9px; height: 48px; margin: 5px; font-size: 18px; text-align: center; }" asp-area="" asp-controller="Messenger" asp-action="Index">Friends</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" style=" color: rgba(0,0,0,.5); width: 79px; background: #dec30f; border-radius: 9px; height: 48px; margin: 5px; font-size: 18px; text-align: center; }" asp-area="" asp-controller="account" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" style="font-size:18px; padding-top:20px;" href="#">/</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" style=" color: rgba(0,0,0,.5); width: 79px; background: aquamarine; border-radius: 9px; height: 48px; margin: 5px; font-size: 18px; text-align: center; }" asp-area="" asp-controller="account" asp-action="Register">Register</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @RenderBody()
+        <div id="chat_widnow">
+            <div id="chat_title_bar">
+                <span class="col-sm-9 text-primary"><strong>Online Users</strong></span>
+                <div id="chat_min_button"><i class="fa fa-plus-square"></i></div>
+            </div>
+            <div id="chat_box" style="display: none;overflow-y:auto;">
+            </div>
+        </div>
+        <div id="chat_div"></div>
+        <input id="hdId" type="hidden" />
+        <input id="hdUserName" type="hidden" />
+        <asp:HiddenField ID="hdnCurrentUserName" runat="server" />
+        <asp:HiddenField ID="hdnCurrentUserID" runat="server" />
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - SignalRMessenger - <a asp-area="" asp-controller="Home" asp-action="Index">Messenger</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/jquery.signalR-2.2.0.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/js/jquery.ui.chatbox.js"></script>
+    <script src="~/js/chatboxManager.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

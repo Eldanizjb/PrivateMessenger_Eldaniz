@@ -1,0 +1,40 @@
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\SignalRPrivateChat.dll.config
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\SignalRPrivateChat.dll
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\SignalRPrivateChat.pdb
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.dll
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.Security.dll
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Newtonsoft.Json.dll
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Owin.dll
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.xml
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.Security.xml
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Newtonsoft.Json.xml
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\obj\Debug\SignalRPrivateChat.csprojResolveAssemblyReference.cache
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\obj\Debug\SignalRPrivateChat.dll
+E:\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\obj\Debug\SignalRPrivateChat.pdb
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\SignalRPrivateChat.dll.config
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\SignalRPrivateChat.dll
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\SignalRPrivateChat.pdb
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.dll
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.Security.dll
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Newtonsoft.Json.dll
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Owin.dll
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.xml
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Microsoft.Owin.Security.xml
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\bin\Newtonsoft.Json.xml
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\obj\Debug\SignalRPrivateChat.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\obj\Debug\SignalRPrivateChat.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\obj\Debug\SignalRPrivateChat.csproj.CopyComplete
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\obj\Debug\SignalRPrivateChat.dll
+C:\Users\ACER\Desktop\New folder (2)\SignalR-private-one-to-one-chat\SignalR-private-one-to-one-chat\SignalRPrivateChat\SignalRPrivateChat\obj\Debug\SignalRPrivateChat.pdb

@@ -1,0 +1,63 @@
+﻿@model List<CustomUser>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 md-3" >
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="header-title pb-3 mt-0">Please Chouse User</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <tbody>
+                                @{
+                                    foreach (var item in Model)
+                                    {
+                                    <tr>
+                                        <td>
+                                            <p style="display: inline-block; padding-right:30px">Chouse User</p><a class="btn btn-primary" asp-controller="messenger" asp-action="chat" asp-route-recieverId="@item.Id">@item.Name  </a>
+                                        </td>
+                                     </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please select user</h3>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            @foreach (var item in Model)
+                            {
+                                <option asp-controller="messenger" asp-action="chat" asp-route-recieverId="@item.Id">
+                                    @item.Name
+                                </option>
+                            }
+                        </select>
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <button type="submit" class="btn btn-lg btn-success btn-block" OnClick="btnLogin_Click">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>*@

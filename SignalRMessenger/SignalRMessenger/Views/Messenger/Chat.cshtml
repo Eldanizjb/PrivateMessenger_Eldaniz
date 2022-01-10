@@ -1,0 +1,33 @@
+﻿@model VmMessage
+@{
+    ViewData["Title"] = "Chat";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center " style=" justify-content: center; display: flex; flex-wrap: nowrap; }">
+            <h1 class="mb-5">Send message to: @Model.User.Name</h1>
+            <img class="avatar" src="~/images/images (4).jpg" alt="image" />
+        </div>
+        <hr />
+        <div class="col-lg-12 "  style="display: flex; flex-wrap: nowrap; justify-content: space-around; ">
+            <div class="messageContainer mb-2">
+                @foreach (var item in Model.Messages)
+                {
+                    <p class="@(item.SenderId==Model.SenderId?"sender":"reciever")">@item.Text</p>
+                }
+         
+            </div>
+        </div>
+
+        <div class="col-lg-12 " style="display: flex; flex-wrap: nowrap; justify-content: space-around; display: flex;">
+            <div class="input-group mb-3 ">
+                <input type="text" class="form-control" id="messengerInput" placeholder="Type message...">
+                <input hidden id="recieverId" value="@Model.User.Id">
+                <button class="btn btn-outline-secondary" type="button" id="messengerButton" style="margin-top: 8px;">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
